@@ -1,0 +1,59 @@
+name: 📝 Documentation Issue
+description: Report an issue with documentation or suggest improvements
+title: "[Docs]: "
+labels: ["documentation", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our documentation!
+        
+  - type: dropdown
+    id: type
+    attributes:
+      label: Documentation Issue Type
+      description: What kind of documentation issue is this?
+      options:
+        - Missing documentation
+        - Incorrect/outdated documentation
+        - Unclear documentation
+        - Suggestion for improvement
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Where is the documentation issue? (provide URL, section name, etc.)
+      placeholder: "e.g., README.md, Help section > Getting Started"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue Description
+      description: Describe the documentation issue
+      placeholder: What's wrong or missing?
+    validations:
+      required: true
+      
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Improvement
+      description: How would you improve this documentation?
+      placeholder: What would make this better?
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context or screenshots
+      placeholder: Any other information that might be helpful...
+    validations:
+      required: false
