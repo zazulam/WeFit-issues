@@ -1,0 +1,43 @@
+name: ❓ Question
+description: Ask a question about using WeFit
+title: "[Question]: "
+labels: ["question", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question about WeFit? We're here to help!
+        
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: Ask your question here...
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What is your question about?
+      options:
+        - Getting Started
+        - Features & Functionality
+        - Account & Settings
+        - Workouts & Exercises
+        - Nutrition & Diet
+        - Technical Issue
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any additional information that might help us answer your question
+      placeholder: Provide more details if needed...
+    validations:
+      required: false
